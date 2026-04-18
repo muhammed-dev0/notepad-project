@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Not just a one-click take. The fastest mobile notepad experience, free from clutter! Instantly record your ideas with a lightweight design and dark mode support. The simplest solution for those looking for a free note-taking app. Categorize your notes and access them from your home screen with widget support.">
+    <title>Keep Note</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="input-container">
+                <button class="searchBtn"><img src="search.svg" alt="Search"></button>
+                <input autocomplete="off" class="search-inp" type="text" placeholder="Search notes...">
+            </div>
+            <button data-task="setting-page" class="setting-btn"><img src="settings.svg" alt="Settings"></button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hidden" id="setting">
+            <div class="back-icon">
+                <button data-button="back" data-task="return2"><img src="back.svg.svg" alt="Back"></button>
+            </div>
+            <ul class="set-list">
+                <li class="set-list-item">
+                    <button class="opt-button" data-task="option"><span>Dark Mode</span> <span></span></button>
+                </li>
+            </ul>
+        </section>
+
+        <section id="main-menu">
+            <div id="notes-container">
+                <ul id="list"></ul>
+            </div>
+            <div id="empty-container">
+                <h4>No notes yet</h4>
+                <button data-task="add" class="add-button">Add note</button>
+            </div>
+
+            <div class="add-but-container">
+                <button data-task="add" id="cross" class="add-button">+</button>
+            </div>
+        </section>
+
+        <section class="hidden" id="adds-menu">
+            <nav class="menu-cont">
+                <button data-button="back" data-task="return3"><img src="back.svg.svg" alt="Back"></button>
+                <button data-task="save"><img src="tick.svg" alt="Save"></button>
+            </nav>
+            <div class="text-container">
+                <div class="input-cont">
+                    <input autofocus autocomplete="off" class="input" type="text" placeholder="Title" maxlength="40">
+                </div>
+                <div class="textarea-cont">
+                    <textarea class="text" placeholder="Please enter the content here..." spellcheck="false"></textarea>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html> 
